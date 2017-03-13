@@ -1,7 +1,7 @@
 # OSA-MS9710B-Remote-Control-Software
 Program to remote control Optical Spectrum Analyser MS9710B connected with RS232C port
 
-Requires linux with g++, python, pyserial and git installed.
+Requires linux with g++, python, pyserial, wget and git installed.
 
 Instructions to install:
 
