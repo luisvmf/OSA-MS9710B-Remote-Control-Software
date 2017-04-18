@@ -37,4 +37,4 @@ Go to final install folder (for example /usr) and run:
 
 The desktop file (named OSA.desktop) to run the program is in OSA/OSA-MS9710B-Remote-Control-Software/.
 
-![alt tag](https://raw.githubusercontent.com/luisvmf/OSA-MS9710B-Remote-Control-Software/master/Screenshot.png)
+![alt tag](https://github.com/luisvmf/OSA-MS9710B-Remote-Control-Software/blob/master/Screenshot%20from%202017-04-18%2018-38-42.png?raw=true)
