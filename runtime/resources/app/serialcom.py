@@ -13,21 +13,26 @@ stop=sys.argv[7]
 #                     parity=serial.PARITY_NONE,bytesize=serial.EIGHTBITS,stopbits=serial.STOPBITS_ONE, rtscts=1)
 try:
 	ser = serial.Serial(''+device+'', 9600, timeout=0,parity=serial.PARITY_NONE,bytesize=serial.EIGHTBITS,stopbits=serial.STOPBITS_ONE, rtscts=1)
+	ser.write("*CLS\n")
 except serial.serialutil.SerialException:
 	time.sleep(1)
 	try:
 		ser = serial.Serial(''+device+'', 9600, timeout=0,parity=serial.PARITY_NONE,bytesize=serial.EIGHTBITS,stopbits=serial.STOPBITS_ONE, rtscts=1)
+		ser.write("*CLS\n")
 	except serial.serialutil.SerialException:
 		time.sleep(3)
 		try:
 			ser = serial.Serial(''+device+'', 9600, timeout=0,parity=serial.PARITY_NONE,bytesize=serial.EIGHTBITS,stopbits=serial.STOPBITS_ONE, rtscts=1)
+			ser.write("*CLS\n")
 		except serial.serialutil.SerialException:
 			time.sleep(5)
 			try:
 				ser = serial.Serial(''+device+'', 9600, timeout=0,parity=serial.PARITY_NONE,bytesize=serial.EIGHTBITS,stopbits=serial.STOPBITS_ONE, rtscts=1)
+				ser.write("*CLS\n")
 			except serial.serialutil.SerialException:
 				time.sleep(3)
 				ser = serial.Serial(''+device+'', 9600, timeout=0,parity=serial.PARITY_NONE,bytesize=serial.EIGHTBITS,stopbits=serial.STOPBITS_ONE, rtscts=1)
+				ser.write("*CLS\n")
 
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
