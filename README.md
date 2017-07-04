@@ -1,11 +1,11 @@
 # OSA-MS9710B-Remote-Control-Software
 Program to remotely control Optical Spectrum Analyser MS9710B connected with RS232C port
 
-Requires Linux with g++, python, pyserial, wget and git installed.
+Requires Linux with g++, python, pyserial (included by default on most linux distributions), pygtk (included by default on most linux distributions), wget , unzip and git installed.
 
 Instructions to install:
 
-If you are going to use an USB to RS232C converter with OSA create a file in /etc/udev/rules.d with the name 99-usb-serial.rules with the folowing code:
+We are going to use an USB to RS232C converter with OSA, so create a file in /etc/udev/rules.d with the name 99-usb-serial.rules with the folowing code:
 
         SUBSYSTEM=="tty", ATTRS{idVendor}=="????", ATTRS{idProduct}=="????", ATTRS{serial}=="????", SYMLINK+="osaUSB"
 
@@ -37,9 +37,14 @@ Go to final install folder (for example /usr) and run:
 
 The desktop file (named OSA.desktop) to run the program is in OSA/OSA-MS9710B-Remote-Control-Software/.
 
+Main program screen:
 ![alt tag](https://raw.githubusercontent.com/luisvmf/OSA-MS9710B-Remote-Control-Software/master/screenshots/screenshot.png)
+Main program screen running on system with dark theme:
 ![alt tag](https://raw.githubusercontent.com/luisvmf/OSA-MS9710B-Remote-Control-Software/master/screenshots/system_with_dark_theme.png)
+Main program screen, linear scale select:
 ![alt tag](https://raw.githubusercontent.com/luisvmf/OSA-MS9710B-Remote-Control-Software/master/screenshots/lin_scale.png)
+Main program screen, LOG scale select:
 ![alt tag](https://raw.githubusercontent.com/luisvmf/OSA-MS9710B-Remote-Control-Software/master/screenshots/LOG_scale.png)
+Main program screen during data acquisition:
 ![alt tag](https://raw.githubusercontent.com/luisvmf/OSA-MS9710B-Remote-Control-Software/master/screenshots/Data_download_progress_bar.png)
 
