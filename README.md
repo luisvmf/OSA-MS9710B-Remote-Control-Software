@@ -4,14 +4,12 @@ Program to remotely control Optical Spectrum Analyser MS9710B connected with RS2
 Requires Linux with g++, python, pyserial (included by default on most Linux distributions), pygtk (included by default on most Linux distributions), wget , unzip and git installed.
 
 Instructions to install:
-***************
+
 ***************
 IMPORTANT:
 ****************
-****DON'T CONNECT OR DISCONECT THE USB TO SERIAL CONVERTER WITH THE OSA TURNED ON*******
+****DON'T CONNECT OR DISCONECT THE USB TO SERIAL CONVERTER WITH THE OSA TURNED ON****
 ***************
-***************
-
 
 We are going to use an USB to RS232C converter with OSA, so create a file in /etc/udev/rules.d with the name 99-usb-serial.rules with the folowing code:
 
