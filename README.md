@@ -1,4 +1,5 @@
 # OSA-MS9710B-Remote-Control-Software
+![alt tag](https://img.shields.io/badge/build-passing-brightgreen.svg)
 Program to remotely control Optical Spectrum Analyser MS9710B connected with RS232C port
 
 Requires Linux with g++, python, pyserial (included by default on most Linux distributions), pygtk (included by default on most Linux distributions), wget , unzip and git installed.
@@ -43,14 +44,19 @@ Go to final install folder (for example /usr) and run:
 
 
 The desktop file (named OSA.desktop) to run the program is in OSA/OSA-MS9710B-Remote-Control-Software/.
+
 Program main screen:
 ![alt tag](https://raw.githubusercontent.com/luisvmf/OSA-MS9710B-Remote-Control-Software/master/screenshots/screenshot.png)
-Pprogram main screen running on system with dark theme:
+
+Program main screen running on system with dark theme:
 ![alt tag](https://raw.githubusercontent.com/luisvmf/OSA-MS9710B-Remote-Control-Software/master/screenshots/system_with_dark_theme.png)
+
 Program main screen with linear scale option selected:
 ![alt tag](https://raw.githubusercontent.com/luisvmf/OSA-MS9710B-Remote-Control-Software/master/screenshots/lin_scale.png)
+
 Program main screen with LOG scale option selected:
 ![alt tag](https://raw.githubusercontent.com/luisvmf/OSA-MS9710B-Remote-Control-Software/master/screenshots/LOG_scale.png)
+
 Program main screen during data acquisition:
 ![alt tag](https://raw.githubusercontent.com/luisvmf/OSA-MS9710B-Remote-Control-Software/master/screenshots/Data_download_progress_bar.png)
 
