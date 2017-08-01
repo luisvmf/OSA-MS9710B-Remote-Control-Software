@@ -51,7 +51,7 @@ ser.write("STA?\n")
 while contador<1:
 	byteb = ser.read(size=1)
 	effveefv=effveefv+1
-	if effveefv>25000:
+	if effveefv>90000:
 		raise Exception('This is the exception you expect to handle')
 	if byteb=="\n":
 		contador=contador+1
@@ -67,7 +67,7 @@ effveefv=0
 while contador<1:
 	bytec = ser.read(size=1)
 	effveefv=effveefv+1
-	if effveefv>25000:
+	if effveefv>90000:
 		raise Exception('This is the exception you expect to handle')
 	if bytec=="\n":
 		contador=contador+1
@@ -89,7 +89,7 @@ ser.write("SMT?\n")
 while contador<1:
 	bytec = ser.read(size=1)
 	effveefv=effveefv+1
-	if effveefv>25000:
+	if effveefv>90000:
 		raise Exception('This is the exception you expect to handle')
 	if bytec=="\n":
 		contador=contador+1
@@ -108,12 +108,19 @@ while contador<1:
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
 trocouiniciooufim=0
+if float(stop)!=float(STO):
+	ser.write("STO 1750\n")
+	time.sleep(3)
+	#print("Enviado STO")
+	trocouiniciooufim=1
 if float(start)!=float(STA):
 	ser.write("STA "+start+"\n")
+	time.sleep(3)
 	#print("Enviado STA")
 	trocouiniciooufim=1
 if float(stop)!=float(STO):
 	ser.write("STO "+stop+"\n")
+	time.sleep(3)
 	#print("Enviado STO")
 	trocouiniciooufim=1
 if boxcar+""!=smoothatualOSAjfvggg+"":
@@ -122,10 +129,10 @@ if boxcar+""!=smoothatualOSAjfvggg+"":
 	trocouiniciooufim=1
 	time.sleep(3)
 if trocouiniciooufim==1:
+	time.sleep(2)
 	ser.write("*CLS\n")
 
-
-
+time.sleep(1)
 
 STA=""
 contador=0
@@ -178,13 +185,19 @@ while contador<1:
 
 
 
-
+if float(stop)!=float(STO):
+	ser.write("STO 1750\n")
+	time.sleep(3)
+	#print("Enviado STO")
+	trocouiniciooufim=1
 if float(start)!=float(STA):
 	ser.write("STA "+start+"\n")
+	time.sleep(3)
 	#print("Enviado STA")
 	trocouiniciooufim=1
 if float(stop)!=float(STO):
 	ser.write("STO "+stop+"\n")
+	time.sleep(3)
 	#print("Enviado STO")
 	trocouiniciooufim=1
 if boxcar+""!=smoothatualOSAjfvggg+"":
@@ -193,17 +206,12 @@ if boxcar+""!=smoothatualOSAjfvggg+"":
 	time.sleep(3)
 	trocouiniciooufim=1
 if trocouiniciooufim==1:
+	time.sleep(2)
 	ser.write("*CLS\n")
 
 
+time.sleep(2)
 
-
-if float(start)!=float(STA):
-	raise Exception('This is the exception you expect to handle')
-if float(stop)!=float(STO):
-	raise Exception('This is the exception you expect to handle')
-if boxcar+""!=smoothatualOSAjfvggg+"":
-	raise Exception('This is the exception you expect to handle')
 
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
@@ -245,6 +253,41 @@ if trocouiniciooufim==1:
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
+
+STA=""
+contador=0
+ser.write("STA?\n")
+#print("Enviado STA?")
+while contador<1:
+	byteb = ser.read(size=1)
+	if byteb=="\n":
+		contador=contador+1
+        if byteb!="\n":
+		if byteb!="\r":
+			if byteb!="\r\n":
+        			STA=STA+byteb
+STO=""
+contador=0
+ser.write("STO?\n")
+#print("Enviado STO?")
+while contador<1:
+	bytec = ser.read(size=1)
+	if bytec=="\n":
+		contador=contador+1
+	if bytec!="\n":
+		if bytec!="\r":
+			if bytec!="\r\n":
+        			STO=STO+bytec
+
+
+if float(start)!=float(STA):
+	raise Exception('This is the exception you expect to handle')
+if float(stop)!=float(STO):
+	raise Exception('This is the exception you expect to handle')
+if boxcar+""!=smoothatualOSAjfvggg+"":
+	raise Exception('This is the exception you expect to handle')
+
+
 ser.write("*CLS\n")
 ser.write("MPT "+a+"\n")
 ser.write("RES "+b+"\n")
