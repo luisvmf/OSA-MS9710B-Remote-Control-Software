@@ -45,10 +45,14 @@ except serial.serialutil.SerialException:
 #-------------------------------------------------------------------------------
 STA=""
 contador=0
+effveefv=0
 ser.write("STA?\n")
 #print("Enviado STA?")
 while contador<1:
-        byteb = ser.read(size=1)
+	byteb = ser.read(size=1)
+	effveefv=effveefv+1
+	if effveefv>25000:
+		raise Exception('This is the exception you expect to handle')
 	if byteb=="\n":
 		contador=contador+1
         if byteb!="\n":
@@ -58,9 +62,13 @@ while contador<1:
 STO=""
 contador=0
 ser.write("STO?\n")
+effveefv=0
 #print("Enviado STO?")
 while contador<1:
-        bytec = ser.read(size=1)
+	bytec = ser.read(size=1)
+	effveefv=effveefv+1
+	if effveefv>25000:
+		raise Exception('This is the exception you expect to handle')
 	if bytec=="\n":
 		contador=contador+1
 	if bytec!="\n":
@@ -75,10 +83,14 @@ while contador<1:
 
 smoothatualOSAjfvggg=""
 contador=0
+effveefv=0
 ser.write("SMT?\n")
 #print("Enviado SMT?")
 while contador<1:
-        bytec = ser.read(size=1)
+	bytec = ser.read(size=1)
+	effveefv=effveefv+1
+	if effveefv>25000:
+		raise Exception('This is the exception you expect to handle')
 	if bytec=="\n":
 		contador=contador+1
 	if bytec!="\n":
@@ -120,7 +132,7 @@ contador=0
 ser.write("STA?\n")
 #print("Enviado STA?")
 while contador<1:
-        byteb = ser.read(size=1)
+	byteb = ser.read(size=1)
 	if byteb=="\n":
 		contador=contador+1
         if byteb!="\n":
@@ -132,7 +144,7 @@ contador=0
 ser.write("STO?\n")
 #print("Enviado STO?")
 while contador<1:
-        bytec = ser.read(size=1)
+	bytec = ser.read(size=1)
 	if bytec=="\n":
 		contador=contador+1
 	if bytec!="\n":
@@ -147,7 +159,7 @@ contador=0
 ser.write("SMT?\n")
 #print("Enviado SMT?")
 while contador<1:
-        bytec = ser.read(size=1)
+	bytec = ser.read(size=1)
 	if bytec=="\n":
 		contador=contador+1
 	if bytec!="\n":
@@ -183,6 +195,15 @@ if boxcar+""!=smoothatualOSAjfvggg+"":
 if trocouiniciooufim==1:
 	ser.write("*CLS\n")
 
+
+
+
+if float(start)!=float(STA):
+	raise Exception('This is the exception you expect to handle')
+if float(stop)!=float(STO):
+	raise Exception('This is the exception you expect to handle')
+if boxcar+""!=smoothatualOSAjfvggg+"":
+	raise Exception('This is the exception you expect to handle')
 
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
