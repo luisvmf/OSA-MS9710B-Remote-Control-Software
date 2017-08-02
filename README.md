@@ -44,8 +44,6 @@ Go to final install folder (for example /usr) and run:
       sudo chmod ugo+rx OSA
 
 
-Known bugs:
-1) When the program is started for the first time the scale selection box is blank. Select an scale (LIN or LOG) before making a data aquisition.
 
 
 The desktop file (named OSA.desktop) to run the program is in OSA/OSA-MS9710B-Remote-Control-Software/.
