@@ -1,4 +1,4 @@
-# OSA-MS9710B-Remote-Control-Software
+# OSA MS9710B Remote Control Software
 ![alt tag](https://img.shields.io/badge/build-passing-brightgreen.svg)
 
 Program to remotely control Optical Spectrum Analyser MS9710B connected with RS232C port
