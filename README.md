@@ -49,13 +49,13 @@ Go to final install folder (for example /usr) and run:
 The desktop file (named OSA.desktop) to run the program is in OSA/OSA-MS9710B-Remote-Control-Software/.
 
 ------
-KNOWN PROBLEMS
+KNOWN PROBLEMS:
 
 1)SWEEP AVARAGE MUST BE DISABLED ON OSA.
 
 2)SCALE FOR GRAPH IN OSA SCREEN IS ALWAYS SET AT 1.
 
-
+------
 
 Program main screen:
 ![alt tag](https://raw.githubusercontent.com/luisvmf/OSA-MS9710B-Remote-Control-Software/master/screenshots/screenshot.png)
