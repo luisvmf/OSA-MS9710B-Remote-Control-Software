@@ -50,8 +50,11 @@ The desktop file (named OSA.desktop) to run the program is in OSA/OSA-MS9710B-Re
 
 ------
 KNOWN PROBLEMS
+
 1)SWEEP AVARAGE MUST BE DISABLED ON OSA.
+
 2)SCALE FOR GRAPH IN OSA SCREEN IS ALWAYS SET AT 1.
+
 
 
 Program main screen:
