@@ -1,6 +1,9 @@
 # OSA MS9710B Remote Control Software
 ![alt tag](https://img.shields.io/badge/build-passing-brightgreen.svg)
 
+# ***This is no longer mantained, suport for OSA MS9710 will be eventualy added to spectraread***
+***This software depends on many old system libraries and will not run on newer systems***
+
 Program to remotely control Optical Spectrum Analyser MS9710B connected with RS232C port
 
 Requires Linux with g++, python, pyserial (included by default on most Linux distributions), pygtk (included by default on most Linux distributions), wget , unzip and git installed.
