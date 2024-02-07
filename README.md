@@ -1,7 +1,7 @@
 # OSA MS9710B Remote Control Software
 ![alt tag](https://img.shields.io/badge/build-passing-brightgreen.svg)
 
-# ***This is no longer mantained, suport for OSA MS9710 will be eventualy added to spectraread***
+# ***This is no longer maintained, support for OSA MS9710 will be eventually added to spectraread***
 ***This software depends on many old system libraries and will not run on newer systems***
 
 Program to remotely control Optical Spectrum Analyser MS9710B connected with RS232C port
@@ -16,11 +16,11 @@ IMPORTANT:
 ****DON'T CONNECT OR DISCONNECT THE USB TO SERIAL CONVERTER WITH THE OSA TURNED ON.****
 ***************
 
-We are going to use an USB to RS232C converter with OSA, so create a file in /etc/udev/rules.d with the name 99-usb-serial.rules with the folowing code:
+We are going to use an USB to RS232C converter with OSA, so create a file in /etc/udev/rules.d with the name 99-usb-serial.rules with the following code:
 
         SUBSYSTEM=="tty", ATTRS{idVendor}=="????", ATTRS{idProduct}=="????", ATTRS{serial}=="????", SYMLINK+="osaUSB"
 
-Replace the "????" with the required information. idVendor and idProduct can be found with lsusb command (the numbers after ID are idVendor:idProduct). To find the serial number run the folowing command (replace /dev/ttyUSB1 to the file that appears in /dev on your system):
+Replace the "????" with the required information. idVendor and idProduct can be found with lsusb command (the numbers after ID are idVendor:idProduct). To find the serial number run the following command (replace /dev/ttyUSB1 to the file that appears in /dev on your system):
 
         udevadm info -a -n /dev/ttyUSB1 | grep '{serial}' | head -n1;
 
